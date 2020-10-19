@@ -12,6 +12,7 @@
   var currentPage = 1;
   var numberPerPage = 15;
  
+  console.log("test test test");
   preload();
   var allQueries = getQueries();
   if(haveSavedRecords()===false)
