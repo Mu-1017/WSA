@@ -3,8 +3,8 @@
 1. Edit job-widget.js and job-widget-entry(html) code and test with any tool(codepen for example) you like.
 2. Commit
 3. Generate minified js online.
-4. Copy and paste minified js code to wsa_job_widget_1_0.min.js and commit(update version in the name).
-5. Get raw link of wsa_job_widget_1_0.min.js on github. For example: https://raw.githubusercontent.com/Mu-1017/WSA/main/wsa_job_widget_1_0.min.js
+4. Upload minified js on this github repository OR copy paste the minified js code to existing wsa_job_widget_1_0.min.js and commit(update version in the name).
+5. Get raw link of wsa_job_widget_1_0.min.js from github(click Raw Button). For example: https://raw.githubusercontent.com/Mu-1017/WSA/main/wsa_job_widget_1_0.min.js
 6. Replace the word "raw.githubusercontent" to "rawgit" from the above link, and you will get: https://rawgit.com/Mu-1017/WSA/main/wsa_job_widget_1_0.min.js
 7. Open website: https://www.jsdelivr.com/rawgit
 8. Convert the link from step 7 and you will get a new link: https://rawgit.com/Mu-1017/WSA/main/wsa_job_widget_1_0.min.js
