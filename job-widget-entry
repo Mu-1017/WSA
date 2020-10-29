@@ -6,5 +6,7 @@ data-teamtailor-department-select="true"
 data-teamtailor-location-select="true"
 data-teamtailor-feed="public"
 data-teamtailor-api-key="st4Z6Z8T3t6W1gCE94V9ZWBg13Odbltk_8HHtJFw"
-data-teamtailor-region=""></div>
-<script src="https://cdn.jsdelivr.net/gh/Mu-1017/WSA@main/wsa_job_widget_1_0.min.js"></script>
+data-teamtailor-region-id="2098"
+data-teamtailor-region-name="Australia"
+></div>
+<script src="https://cdn.jsdelivr.net/gh/Mu-1017/WSA@main/wsa_job_widget_1_1.min.js"></script>
