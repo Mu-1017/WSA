@@ -11,7 +11,7 @@ var mainRun =  function(){
                                  t.limit&&(t.limit=Math.min(t.limit,30),
                                  e=e+"page[size]="+t.limit+"&"),
                                  t.feed?e=e+"filter[feed]="+t.feed+"&":e+="filter[feed]=public&",t.departments&&(e=e+"filter[department]="+t.departments+"&"),
-                         t.region&&(e=e+"filter[regions]="+t.region+"&"),
+                         t.regionId&&(e=e+"filter[regions]="+t.regionId+"&"),
                          t.preselectedDepartment&&(e=e+"filter[department]="+t.preselectedDepartment+"&"),t.preselectedLocation&&(e=e+"filter[locations]="+t.preselectedLocation+"&"),t.locations&&(e=e+"filter[locations]="+t.locations+"&"),e=e+"api_key="+t.apiKey+"&"):(e=t.url||"https://tt.teamtailor.com/api/jobs?",t.limit&&(e=e+"limit="+t.limit+"&"),t.preselectedDepartment&&(e=e+"department_name="+t.preselectedDepartment+"&"),t.departments&&(e=e+"department_id="+t.departments+"&"),t.locations&&(e=e+"location_id="+t.locations+"&"),t.internalJobs&&(e=e+"internal="+t.internalJobs+"&"),e=e+"company_id="+t.company),e}, 
         //end func d
         
@@ -143,8 +143,11 @@ var mainRun =  function(){
           };
           
           i.apiKey?(l=t.meta.texts.all,s=t.data):(l=t.text,s=t.items),r.innerText=l,r.value="",o.appendChild(r);   
-          
-          s = n==="locations"?s.filter(i => i.attributes.country === "Australia"):s;
+
+          if(n==="locations" && i.regionName)
+          {
+            s = s.filter(x => (""||x.attributes.country).toLowerCase()=== i.regionName.toLowerCase());
+          }
           
           for(var c=0;c<s.length;++c)
             o.appendChild(m(s[c]));
@@ -226,7 +229,8 @@ var mainRun =  function(){
                     {
                       company:t[e].getAttribute("data-teamtailor-company"),
                       apiKey:t[e].getAttribute("data-teamtailor-api-key"),
-                      region:t[e].getAttribute("data-teamtailor-region"),
+                      regionId:t[e].getAttribute("data-teamtailor-region-id"),
+                      regionName:t[e].getAttribute("data-teamtailor-region-name"),
                       limit:t[e].getAttribute("data-teamtailor-limit"),
                       pagenum:t[e].getAttribute("data-teamtailor-pagenum"),
                       preselectedDepartment:t[e].getAttribute("data-teamtailor-department"),
